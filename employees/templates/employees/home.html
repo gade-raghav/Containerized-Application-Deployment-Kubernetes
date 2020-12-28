@@ -1,0 +1,10 @@
+{% extends "employees/main.html"%}
+{% block title %}EMS-Home {% endblock %}
+{% block content%}
+
+<div class="card m-6">
+    <div class="card-body">
+        <p><b>Click button to add employee details</b> </p><a href="{% url 'add_employee'%}"><button type="button" class="btn btn-primary">Add</button></a><br>
+    </div>
+  </div>
+{% endblock%}

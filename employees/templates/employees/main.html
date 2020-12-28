@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="{% static '/css/main.css'%}">
+    </head>
+    <style>
+        #messages{
+			background-color: grey;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+		}
+		#msg{
+			position: fixed;
+            top: 10px;
+            right: 100px;
+            z-index: 1;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+    </style>
+    <body>
+        {% include 'employees/messages.html' %}
+        {% include "employees/navbar.html" %}
+        {% block content %}
+        {% endblock %}
+
+        {% include "employees/footer.html" %}
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        setTimeout(()=>{
+        var alertId = document.getElementById('msg')
+        alertId.classList.add('modal')
+    },3000);
+    </script>
+</html>

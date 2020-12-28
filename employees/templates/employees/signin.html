@@ -1,0 +1,31 @@
+{% extends "employees/main.html"%}
+{% block title %}EMS-Sign in {% endblock %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<br>
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="column">
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem; border: none !important;">
+                        <div class="card-body">
+                            <p class="card-text" style="text-align: center;"><br><br><br><b>Sign-in</b></p>
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{form|crispy}}
+                                <br>
+    
+                                <div class="d-flex justify-content-center mt-3 login_container">
+				 				<input class="btn btn-primary" type="submit" value="Submit">
+                               </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
