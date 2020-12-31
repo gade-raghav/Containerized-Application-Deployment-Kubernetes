@@ -26,7 +26,7 @@ SECRET_KEY = 'v$s+3)(s9)y%&z6p5f6$$wvl6(_$3k#q3rfm1ztu-=c)!oibq9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -78,17 +78,23 @@ WSGI_APPLICATION = 'employeedb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'EMS',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'raghavgade',
-        'PASSWORD': 'rootpass',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+#DATABASES = {
+#   'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'ems',
+#        'HOST': '192.168.43.243',
+#        'PORT': '32000',
+#        'USER': 'root',
+#        'PASSWORD': 'rootpassword',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -127,12 +133,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-MEDIA_URL = '/images/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_URL = '/images/'
 
 #FOR MESSAGE NOTIFS
 from django.contrib.messages import constants as messages

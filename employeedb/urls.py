@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.conf.urls.static import static
+from django.conf import settings
 from django.http import HttpResponse
+from django.urls import re_path
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('employees.urls')),
 ]
+urlpatterns += [
+  re_path(r'^static/(?:.*)$', serve, {'document_root': settings.STATIC_ROOT, })
+]
+
+handler500 = 'employees.views.error_500_view'
+handler404 = 'employees.views.error_404_view'

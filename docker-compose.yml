@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    environment:
+       MYSQL_DATABASE: 'EMS'
+       MYSQL_USER: 'root'
+       MYSQL_PASSWORD: '#Junk0man'
+       MYSQL_ROOT_PASSWORD: '#Junk0man'
+    volumes:
+      - ./db:/var/lib/mysql
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/employeedb 
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
