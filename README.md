@@ -32,9 +32,9 @@ By default Django applications are connected to sqlite database, however, we hav
 
 Our application :
 
-![](//images/homepage.png)
-![](//images/login.png)
-![](//images/form.png)
+![](/images/home.png)
+![](/images/login.png)
+![](/images/form.png)
 
 **Note**: This documentation does not focus on creating the web-application and is more focused on deploying it to Kubernetes. However, detailed explination can be provided during technical discussion.
 
@@ -54,7 +54,7 @@ Docker works using Dockerfile, a file which specifies how Docker is supposed to 
 It contains the steps Docker is supposed to follow to package your app. Once that is done, you can send this packaged app to anyone and they can run it on their system with no problems.
 
 
-![Dockerfile](/images/dockerfile.png)
+![Dockerfile](/images/Dockerfile.png)
 
 Dockerfile starts with a base image that decides on which image your app should be built upon. Basically "Images" are nothing but apps.
 
@@ -208,7 +208,7 @@ To view information about persistent volume:
 
 ` kubectl get pv `
 
-![persistent volume](/images/persistentvolume.png)
+![persistent volume](/images/pv.png)
 
 
 **Persistent volume claim**
@@ -266,7 +266,7 @@ MYSQL_PORT variable has the port number which we need to pass to our web-applica
 To connect to your database directly from outside the K8s cluster use the following command after setting the required variable:
 
 ` mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD} ` 
-![mysql lens](/images/mysqllens.png)
+
 
 ***Lens IDE gives detailed view of the deployment and helps in monitoring the status ***
 
