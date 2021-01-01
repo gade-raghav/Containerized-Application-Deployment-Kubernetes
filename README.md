@@ -10,7 +10,7 @@ GitHub repo link: https://github.com/gade-raghav/kubernetes-assignment/
 
 ### The project has been divided into 6 steps:
 #### Step 1 : Creating a Django web-application which adds Employee ID and Employee name in Mysql database
-#### Step 2 : Dockering the web-application and pushing it to Docker Hub
+#### Step 2 : Dockerizing the web-application and pushing it to Docker Hub
 #### Step 3 : Installing microk8s on your laptop/desktop (Addition step : Installing Lens which is Kubernetes IDE for DEVOPS) 
 #### Step 4 : Creating helm chart to install application (with auto scaling) + database deployed
 #### Step 5 : Deploy ingress nginx controller to do loadbalancing between multiple application container pods.
@@ -36,9 +36,9 @@ Our application :
 ![](/images/login.png)
 ![](/images/form.png)
 
-**Note**: This documentation does not focus on creating the web-application and is more focused on deploying it to Kubernetes. However, detailed explination can be provided during technical discussion.
+**Note**: This documentation does not focus on creating the web-application and is more focused on deploying it to Kubernetes. However, detailed explaination can be provided during technical discussion.
 
-## 2. Dockering the web-application and pushing it to Docker Hub
+## 2. Dockerizing the web-application and pushing it to Docker Hub
 
 Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
