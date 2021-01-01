@@ -30,6 +30,12 @@ This has been achieved using a Django web-application. Code has been pushed to G
 
 By default Django applications are connected to sqlite database, however, we have made changes in settings.py[https://github.com/gade-raghav/kubernetes-assignment/blob/master/employeedb/settings.py] to connect it to Mysql Database which is deployed directly in kubernetes using helm charts.
 
+Our application :
+
+![](//images/homepage.png)
+![](//images/login.png)
+![](//images/form.png)
+
 **Note**: This documentation does not focus on creating the web-application and is more focused on deploying it to Kubernetes. However, detailed explination can be provided during technical discussion.
 
 ## 2. Dockering the web-application and pushing it to Docker Hub
@@ -151,7 +157,6 @@ I have downloaded the AppImage which is extremely easy to use. After download gi
 
 `./Lens-3.6.6.AppImage`
 
-![Lens install](/images/Lens.png)
 
 Provide the path to Kubernetes config file and it gets all the information about the cluster.
 
@@ -310,6 +315,8 @@ Now use the following command to deploy our web-application using helm:
         - PORT: '32000', MYSQL_PORT variable values we exposed
         - USER: 'root', user value in mysql.values  
         - PASSWORD: 'rootpassword', rootpassword value in mysql.values
+        
+![Settings.py](/images/settings.png)
 
 ***We will discuss about ingress.yaml in next step as we need to enable ingress controller prior to our deployments***
 
