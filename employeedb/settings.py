@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'employeedb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 #DATABASES = {
-#   'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'ems',
-#        'HOST': '192.168.43.243',
-#        'PORT': '32000',
-#        'USER': 'root',
-#        'PASSWORD': 'rootpassword',
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
+
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ems',
+        'HOST': '192.168.43.243',
+        'PORT': '32000',
+        'USER': 'root',
+        'PASSWORD': 'rootpassword',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
