@@ -310,11 +310,12 @@ Now use the following command to deploy our web-application using helm:
 ![django install ](/images/djangoinstall.png)
 
 **NOTE**: We need to set the following variable in settings.py file in the web application container for it to access our mysql database:
-        - NAME: 'ems', Database name we passed in mysql.values
-        - HOST: '192.168.43.243', MYSQL_HOST variable value we exported
-        - PORT: '32000', MYSQL_PORT variable values we exposed
-        - USER: 'root', user value in mysql.values  
-        - PASSWORD: 'rootpassword', rootpassword value in mysql.values
+
+- NAME: 'ems', Database name we passed in mysql.values
+- HOST: '192.168.43.243', MYSQL_HOST variable value we exported
+- PORT: '32000', MYSQL_PORT variable values we exposed
+- USER: 'root', user value in mysql.values  
+- PASSWORD: 'rootpassword', rootpassword value in mysql.values
         
 ![Settings.py](/images/settings.png)
 
