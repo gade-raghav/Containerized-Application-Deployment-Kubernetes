@@ -1,0 +1,13 @@
+spec:
+  rules:
+    - host: ems.db
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: django-web-svc
+                port:
+                  number: 8000
+
