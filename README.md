@@ -334,7 +334,7 @@ There are multiple ways to achieve this (helm,.yaml files etc) , however we will
 
 ` microk8s enable ingress `
 
-![ingress controller](/images/ingresscontroller.png)
+![ingress controller](/images/nginx.png)
 
 **Creating Ingress resource for our web-application** 
 
