@@ -307,8 +307,6 @@ Now use the following command to deploy our web-application using helm:
 
 ` helm install django ./django-helm/ `
 
-![django install ](/images/djangoinstall.png)
-
 **NOTE**: We need to set the following variable in settings.py file in the web application container for it to access our mysql database:
 
 - NAME: 'ems', Database name we passed in mysql.values
