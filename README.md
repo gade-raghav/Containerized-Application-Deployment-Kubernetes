@@ -200,7 +200,7 @@ Persistent Volumes are simply a piece of storage in your cluster. Similar to how
 
 This is our .yaml file that helps us to create a volume for MySQL.
 
-![pv file](/images/pvy.yaml)
+![pv file](/images/pvy.png)
 
 Command to create a persistent volume:
 
