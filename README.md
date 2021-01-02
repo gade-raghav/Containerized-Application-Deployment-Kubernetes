@@ -28,7 +28,7 @@ only authenticated users can add employee details to the database.
 
 This has been achieved using a Django web-application. Code has been pushed to GitHub repository (GitHub Link for the repository is mentioned above).
 
-By default Django applications are connected to SQLite database, however, we have made changes in settings.py[https://github.com/gade-raghav/kubernetes-assignment/blob/master/employeedb/settings.py] to connect it to Mysql Database which is deployed directly in Kubernetes using helm charts.
+By default Django applications are connected to SQLite database, however, we have made changes in [settings.py](https://github.com/gade-raghav/kubernetes-assignment/blob/master/employeedb/settings.py) to connect it to Mysql Database which is deployed directly in Kubernetes using helm charts.
 
 Our application :
 
