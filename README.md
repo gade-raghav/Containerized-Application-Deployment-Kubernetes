@@ -200,6 +200,8 @@ Persistent Volumes are simply a piece of storage in your cluster. Similar to how
 
 This is our .yaml file that helps us to create a volume for MySQL.
 
+![pv file](/images/pvy.yaml)
+
 Command to create a persistent volume:
 
 ` kubectl apply -f mysqldb-pv.yaml `
@@ -218,6 +220,8 @@ Pods that need access to persistent storage, obtain that access through the use 
 When a pod wants access to a persistent disk, it will request access to the claim which will specify the size, access mode, and/or storage classes that it will need from a Persistent Volume. Indirectly the pods get access to the PV, but only through the use of a PVC.
 
 This is our .yaml file that helps us to create a persistent volume claim for the persistent volume we just created.
+
+![pvc file](/images/pvcy.png)
 
 Command to create persistent volume claim:
 
