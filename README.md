@@ -328,6 +328,7 @@ Run the following command to get into container running our web application (dja
 After setting these values run these commands on terminal inside container to migrate to mysql database:
 
 ` python manage.py makemigrations`
+
 ` python manage.py migrate `
 
 ***We will discuss ingress.yaml in the next step as we need to enable ingress controller before our deployments***
