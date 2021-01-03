@@ -313,6 +313,10 @@ Now use the following command to deploy our web-application using helm:
 
 **NOTE**: We need to set the following variable in settings.py file in the web application container for it to access our MySQL database:
 
+Run the following command to get into container running our web application (django-deployment-{value} is pod name):
+
+` kubectl exec --stdin --tty django-deployment-674f65c5b5-9hcpc -- /bin/bash `
+
 - NAME: 'ems', Database name we passed in mysql.values
 - HOST: '192.168.43.243', MYSQL_HOST variable value we exported
 - PORT: '32000', MYSQL_PORT variable values we exposed
@@ -320,6 +324,11 @@ Now use the following command to deploy our web-application using helm:
 - PASSWORD: 'rootpassword', rootpassword value in mysql.values
         
 ![Settings.py](/images/settings.png)
+
+After setting these values run these commands on terminal inside container to migrate to mysql database:
+
+` python manage.py makemigrations`
+` python manage.py migrate `
 
 ***We will discuss ingress.yaml in the next step as we need to enable ingress controller before our deployments***
 
