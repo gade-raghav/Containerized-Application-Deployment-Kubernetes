@@ -362,9 +362,9 @@ This resource has already been created when we deployed our web application.
 
 We will be creating a selfsigned certificate using for https encryption using the following commands:
 
-Run the following on terminal(replace ***ems.example.com***):
+Run the following on terminal(replace ***example.com***):
 
-`openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=ems.example.com" -days 365`
+`openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=example.com" -days 365`
 
 ![openssl](/images/openssl.png)
 
@@ -372,11 +372,11 @@ This will genereate tls.crt and tls.key files.
 
 Now we can create a sercret of type tls by using the following command:
 
-`kubectl create secret tls ems-example-com-tls --cert=tls.crt --key=tls.key `
+`kubectl create secret tls example-com-tls --cert=tls.crt --key=tls.key `
 
 ![secret](/images/secret.png)
 
-We are deploying the the certificate for ***ems.example.com*** on ingress controller and following is the ingress.yaml file:
+We are deploying the the certificate for ***example.com*** on ingress controller and following is the ingress.yaml file:
 
 ![ingress file](/images/ingress.yaml)
 
