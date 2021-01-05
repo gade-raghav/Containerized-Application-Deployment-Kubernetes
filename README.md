@@ -378,7 +378,7 @@ Now we can create a sercret of type tls by using the following command:
 
 We are deploying the the certificate for ***example.com*** on ingress controller and following is the ingress.yaml file:
 
-![ingress file](/images/ingress.yaml)
+![ingress file](/images/ingress.png)
 
 In specifications(specs) we are passing the host example.com and validating it using the secret we created.
 
