@@ -384,6 +384,13 @@ In specifications(specs) we are passing the host example.com and validating it u
 
 This is the selfsigned certificate that got issued. However this is only for development purpose. For production environment we can get a certificate from CA authority.
 
+You can enter the following url to view the site:
+
+`https://example.com/home`
+
+Certificate details:
+
+![certificate](/images/certificate.png)
 
 
 
