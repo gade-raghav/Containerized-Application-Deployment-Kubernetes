@@ -5,8 +5,12 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls: 
+    - secretName: example-com-tls
+      hosts:
+        - example.com
   rules:
-    - host: ems.db
+    - host: example.com
       http:
         paths:
           - path: /
