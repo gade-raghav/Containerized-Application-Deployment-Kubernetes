@@ -60,7 +60,7 @@ Dockerfile starts with a base image that decides on which image your app should 
 
 We want to run our application in Python, So we'll use python:3.6 as the base image.
 
-ENV creates an environment variable called PYTHONUNBUFFERED and sets it to 1 (which, remember, is “truthy”). Altogether, this statement means that Docker won't buffer the output from your application; instead, you will get to see your output in your console the way you're used to.
+ENV creates an environment variable called PYTHONUNBUFFERED and sets it to 1. Altogether, this statement means that Docker won't buffer the output from your application; instead, you will get to see your output in your console the way you're used to.
 
 RUN is a Docker command which instructs to run something on the shell. Here we'll use this several time for the following tasks
 - mkdir to make a new directory
