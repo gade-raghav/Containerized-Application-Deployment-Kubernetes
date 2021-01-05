@@ -304,7 +304,7 @@ We have to mention the image name that is being pulled, the Container port on wh
 
 Since we are using ingress-nginx controller to do loadbalancing between multiple applications, we must have an ingress file.
 
-![ingress file](/images/ingress2.png)
+![ingress file](/images/ingress.png)
 
 
 Now use the following command to deploy our web-application using helm:
@@ -352,7 +352,7 @@ There are multiple ways to achieve this (helm,.yaml files, etc) , however, we wi
 
 The following is our ingress.yaml file:
 
-![ingress file](/images/ingress2.png)
+![ingress file](/images/ingress.png)
 
 Pass hostname, path, service name of web application, and port number.
 
@@ -378,7 +378,7 @@ Now we can create a sercret of type tls by using the following command:
 
 We are deploying the the certificate for ***ems.example.com*** on ingress controller and following is the ingress.yaml file:
 
-![ingress file](images/ingress.yaml]
+![ingress file](images/ingress.yaml)
 
 In specifications(specs) we are passing the host example.com and validating it using the secret we created.
 
