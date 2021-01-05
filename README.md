@@ -14,7 +14,7 @@ GitHub repo link: https://github.com/gade-raghav/kubernetes-assignment/
 #### Step 3: Installing microk8s on your laptop/desktop (Addition step: Installing Lens which is Kubernetes IDE for DevOps) 
 #### Step 4: Creating helm chart to install application (with auto-scaling) + database deployed
 #### Step 5: Deploy ingress nginx controller to do loadbalancing between multiple application container pods.
-#### Step 6: Configure nginx ingress controller with SSL certificate (Yet to be configured)
+#### Step 6: Configure nginx ingress controller with SSL/TLS certificate 
 
 ## Pre-requisites
 Operating System: Ubuntu 18.04 LTE
@@ -358,9 +358,32 @@ Pass hostname, path, service name of web application, and port number.
 
 This resource has already been created when we deployed our web application.
 
-## Step 6: Configure nginx ingress controller with SSL certificate 
+## Step 6: Configure nginx ingress controller with TLS/SSL certificate 
 
-This step is yet to be configured.
+We will be creating a selfsigned certificate using for https encryption using the following commands:
+
+Run the following on terminal(replace ***ems.example.com***):
+
+`openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=ems.example.com" -days 365`
+
+![openssl](/images/openssl.png)
+
+This will genereate tls.crt and tls.key files.
+
+Now we can create a sercret of type tls by using the following command:
+
+`kubectl create secret tls ems-example-com-tls --cert=tls.crt --key=tls.key `
+
+![secret](/images/secret.png)
+
+We are deploying the the certificate for ***ems.example.com*** on ingress controller and following is the ingress.yaml file:
+
+![ingress file](images/ingress.yaml]
+
+In specifications(specs) we are passing the host example.com and validating it using the secret we created.
+
+This is the selfsigned certificate that got issued. However this is only for development purpose. For production environment we can get a certificate from CA authority.
+
 
 
 
