@@ -6,7 +6,6 @@ This project aims to deploy an auto-scalable HTML containerized application in K
 Django application on Kubernetes with MySQL database in the backend. 
 
 
-GitHub repo link: https://github.com/gade-raghav/kubernetes-assignment/
 
 ### The project has been divided into 6 steps:
 #### Step 1: Creating a Django web-application that adds Employee ID and Employee name in Mysql database
